@@ -24,9 +24,17 @@ class Page2VC: UIViewController {
         print("DidLoad")
         print("I am Page2")
         rand.text = randString
+        
+        let app = UIApplication.shared.delegate as! AppDelegate
+        
+        print("Page2VC:app:rand = \(app.rand)")
+
 
     }
     
+    @IBAction func quit(_ sender: Any) {
+        exit(0)
+    }
     override func viewDidAppear(_ animated: Bool) {
         print("DidAppear")
     }

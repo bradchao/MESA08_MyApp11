@@ -46,7 +46,21 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let app = UIApplication.shared.delegate as! AppDelegate
+        
+        print("MainVC:app:rand = \(app.rand)")
+        
+        let newrand = Int(arc4random_uniform(100) + 100)
+        print("MainVC:app:newrand = \(newrand)")
+        app.rand = newrand
+        
+        
+        print("static:var1 = \(AppDelegate.var1)")
+        
+        
+        
+        
     }
 
 
